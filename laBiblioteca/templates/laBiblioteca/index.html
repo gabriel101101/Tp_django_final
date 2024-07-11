@@ -1,0 +1,79 @@
+{% extends "laBiblioteca/base.html" %}
+{% load static %}
+
+{% block title %} Bienvenido a la biblioteca {% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'laBiblioteca/style/index.css' %}">
+{% endblock %}
+
+{% block img %}
+    <img class="imagen-inicio " src="{% static 'laBiblioteca/img/presentacion-la-biblioteca.png' %}" alt="Recepción de una biblioteca, con un título superpuesto que dice La biblioteca">
+{% endblock %}
+
+{% block main %}
+    <div class="container text-center my-3">
+        <h1 class="display-4">Bienvenido a La Biblioteca</h1>
+        <p class="lead my-2">Descubre un mundo de conocimiento y entretenimiento en nuestra amplia colección de libros. ¡Encuentra tus favoritos y descubre nuevos títulos que inspirarán tu próxima aventura!</p>
+        <a href="{% url 'catalogo' %}" class="btn btn-primary btn-lg mt-2">Explora Nuestro Catálogo</a>
+    </div>
+
+    <div class="container mt-3">
+
+        <div class="row">
+
+
+            <div class="row" style="width: 400px;">
+                <div class="col m-5">
+                    <div class="card h-100">
+                            <img src="{% static 'laBiblioteca/img/lb_04.jpg' %}" alt="Portada no disponible">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuevos Lanzamientos</h5>
+                            <p>Título: La Sombra de los Dioses</p>
+                            <p>Autor: John Gwynne</p>
+                            <div style="text-align: center; align-items: center;">
+                                <a class="btn btn-info mt-2 mb-1 py-2 w-50"href="{% url 'catalogo' %}?category=recommended">Ver Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" style="width: 400px;">
+                <div class="col m-5">
+                    <div class="card h-100">
+                            <img src="{% static 'laBiblioteca/img/lb_11.jpg' %}" alt="Portada no disponible">
+                        <div class="card-body">
+                            <h5 class="card-title">Recomendados</h5>
+                            <p>Título: Crónicas marcianas</p>
+                            <p>Autor: Ray Bradbury</p>
+                            <div style="text-align: center; align-items: center;">
+                                <a class="btn btn-info mt-2 mb-1 py-2 w-50"href="{% url 'catalogo' %}?category=recommended">Ver Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="width: 400px;">
+                <div class="col m-5">
+                    <div class="card h-100">
+                            <img src="{% static 'laBiblioteca/img/lb_12.jpg' %}" alt="Portada no disponible">
+                        <div class="card-body">
+                            <h5 class="card-title">Más Vendido</h5>
+                            <p>Título: SW. Episodio IX. El renacer de la resistencia</p>
+                            <p>Autor: Disney</p>
+                            
+                            <div style="text-align: center; align-items: center;">
+                                <a class="btn btn-info mt-2 mb-1 py-2 w-50"href="{% url 'catalogo' %}?category=recommended">Ver Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+{% endblock %}
