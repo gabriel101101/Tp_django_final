@@ -18,7 +18,7 @@ body{
 .imagen-inicio{
     margin-top: 0;
     width: 100%;
-    height: 500px;
+    height: 550px;
     position: relative;
     object-fit: cover;
 }
